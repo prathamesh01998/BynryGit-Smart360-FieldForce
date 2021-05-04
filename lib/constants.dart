@@ -42,11 +42,11 @@ const double filterwidthheight = 17;
 const double filterPadding = 10;
 
 
-const double jobCardrPadding = 5;
-const double jobCardrfontsizeid = 18;
-const double jobCardrfontsizetime = 15;
-const double jobCardrfontsizetitle = 20;
-const double jobCardrfontsizeaddress = 16;
+const double jobCardrPadding =8;
+const double jobCardrfontsizeid = 12;
+const double jobCardrfontsizetime = 10;
+const double jobCardrfontsizetitle = 15;
+const double jobCardrfontsizeaddress = 14;
 
 const double mainbodyHeight = 500;
 
@@ -56,7 +56,7 @@ const double performancefontsize2 = 25;
 
 const double profilefontsize = 26;
 
-const double rowstatMarginlefftright = 15;
+const double rowstatMarginlefftright = 10;
 const double rowstatfontsize = 15;
 const double rowstatheight = 35;
 const double rowstatwidth = 1;
@@ -65,10 +65,10 @@ const double rowstatwidth = 1;
 const double appbarheightwidth = 50;
 
 
-const double togglebuttonminwidth =  55;
-const  double togglebuttonminheight =  32;
-const double togglebuttonwidth =  17;
-const  double togglebuttonheight =  17;
+const double togglebuttonminwidth =  40;
+const  double togglebuttonminheight =  25;
+const double togglebuttonwidth =  12;
+const  double togglebuttonheight =  12;
 
 
 

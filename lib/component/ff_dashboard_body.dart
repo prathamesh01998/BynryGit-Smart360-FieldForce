@@ -3,7 +3,7 @@ import 'package:Field_Force/component/main_body.dart';
 import 'package:Field_Force/component/profile_image.dart';
 import 'package:Field_Force/component/profile_name.dart';
 
-import 'package:Field_Force/screens/appointment_dashboarrd_screen.dart';
+import 'package:Field_Force/screens/AppointmentScreen/appointment_dashboarrd_screen.dart';
 
 import 'package:flutter/material.dart';
 

@@ -2,11 +2,13 @@ import "package:flutter/material.dart";
 import 'package:flutter_svg/svg.dart';
 
 import '../constants.dart';
+import '../logger.dart';
 
 class Appbar extends StatelessWidget {
   final String title;
-
-  const Appbar({Key key, this.title}) : super(key: key);
+  final String var_type ;
+  // ignore: non_constant_identifier_names
+  const Appbar({Key key, this.title,this.var_type}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(children: [
@@ -17,16 +19,26 @@ class Appbar extends StatelessWidget {
           bottomOpacity: 0.0,
           elevation: 0.0,
           leading: IconButton(
-            icon: SvgPicture.asset("assets/icons/Menu.svg"),
+            icon: var_type == "back"? Icon(Icons.arrow_back_sharp) : SvgPicture.asset("assets/icons/Menu.svg"),
             onPressed: () {
-              debugPrint("navbar click");
+              
+              if (var_type == "back"){
+                Navigator.pop(context);
+              }
+              else{
+                     // appbarnavgation;
+              }
             },
           ),
+          
           actions: [
-            IconButton(
+            
+            var_type =="back" ?
+            Text("")
+            :IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                debugPrint("search click");
+              // appbarsearch;
               },
             ),
             Padding(
@@ -38,7 +50,7 @@ class Appbar extends StatelessWidget {
                   height: appbarheightwidth,
                 ),
                 onPressed: () {
-                  debugPrint("notification click");
+                // appbarnotifiction;
                 },
               ),
             )

@@ -7,7 +7,7 @@ class Rowstats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-                  padding: EdgeInsets.fromLTRB(20, 180, 20, 10),
+                  padding: EdgeInsets.fromLTRB(10, 260, 20, 10),
                   child: IntrinsicHeight(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

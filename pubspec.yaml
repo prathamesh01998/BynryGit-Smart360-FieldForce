@@ -28,11 +28,28 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+  date_field: ^1.0.5
+  lite_rolling_switch:
+  google_maps_flutter: ^1.2.0
+  number_inc_dec:
+  flutter_switch: 
+  flutter_signature_pad:
+  video_player: ^1.0.1
+  timelines: ^0.0.2
+  expansion_tile_card: 
+  flutter_expanded_tile:
+  image_picker: 
+  dotted_border: 
+  multi_select_flutter:
+  im_stepper: ^0.1.2+6
+
+  date_time_picker: "^1.1.0"
   sliding_up_panel: ^1.0.2
   flutter_svg: ^0.19.1
   charts_flutter: ^0.10.0
   fl_chart: ^0.12.0
   toggle_switch: ^0.1.7
+  pie_chart: ^4.0.0
   font_awesome_flutter: ^8.9.0
 
 dev_dependencies:

@@ -1,57 +1,48 @@
-// import 'package:charts_flutter/flutter.dart' as charts;
-// import 'package:flutter/material.dart';
-// import "dart:math";
-// class GaugeChart extends StatelessWidget {
-//   final List<charts.Series> seriesList;
-//   final bool animate;
-
-//   GaugeChart(this.seriesList, {this.animate});
-
-//   /// Creates a [PieChart] with sample data and no transition.
-//   factory GaugeChart.withSampleData() {
-//     return new GaugeChart(
-//       _createSampleData(),
-//       // Disable animations for image tests.
-//       animate: false,
-//     );
-//   }
+import 'package:flutter/material.dart';
+import 'package:pie_chart/pie_chart.dart';
 
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return new charts.PieChart(seriesList,
-//         animate: animate,
-//         // Configure the width of the pie slices to 30px. The remaining space in
-//         // the chart will be left as a hole in the center. Adjust the start
-//         // angle and the arc length of the pie so it resembles a gauge.
-//         defaultRenderer: new charts.ArcRendererConfig(
-//             arcWidth: 30, startAngle: 4 / 5 * pi, arcLength: 7 / 5 * pi));
-//   }
+class Piechart extends StatefulWidget {
+  @override
+  _PiechartState createState() => _PiechartState();
+}
 
-//   /// Create one series with sample hard coded data.
-//   static List<charts.Series<GaugeSegment, String>> _createSampleData() {
-//     final data = [
-//       new GaugeSegment(500, 2503,1500,Colors.blue),
+class _PiechartState extends State<Piechart> {
+  Map<String, double> dataMap = {
+    "Reading": 500,
+    "Bill distribution": 2503,
+    "Notice": 1500,
+    
+  };
+  // Color colorList = [
+  //   Colors.
+  // ]
+
+  @override
+  Widget build(BuildContext context) {
+    return PieChart(
+      dataMap: dataMap,
+      animationDuration: Duration(milliseconds: 800),
+      chartLegendSpacing: 32,
+      chartRadius: MediaQuery.of(context).size.width / 3.2,
+      //colorList: colorList,
+      initialAngleInDegree: 0,
+      chartType: ChartType.ring,
      
-//     ];
-
-//     return [
-//       new charts.Series<GaugeSegment, String>(
-//         id: 'Segments',
-//         domainFn: (GaugeSegment segment, _) => segment.segment,
-//         measureFn: (GaugeSegment segment, _) => segment.size,
-//         data: data,
-//       )
-//     ];
-//   }
-// }
-
-// /// Sample data type.
-// class GaugeSegment {
-//   final int reading;
-//   final int bill;
-//   final int notice;
-//   final Color clrval;
-
-//   GaugeSegment( this.reading, this.bill, this.notice, this.clrval);
-// }
+      ringStrokeWidth: 20,
+      centerText: "85%",
+      legendOptions: LegendOptions(
+       
+        showLegends: false,
+        
+      ),
+      chartValuesOptions: ChartValuesOptions(
+        showChartValueBackground: true,
+        showChartValues: false,
+        showChartValuesInPercentage: false,
+        showChartValuesOutside: true,
+        decimalPlaces: 1,
+      ),
+    );
+  }
+}

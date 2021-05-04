@@ -15,7 +15,7 @@ class MyAPP extends StatelessWidget {
       title: 'Feild Force',
       
     theme: ThemeData(
-      scaffoldBackgroundColor: Colors.blue[900],
+     // scaffoldBackgroundColor: Colors.blue[900],
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
@@ -24,3 +24,4 @@ class MyAPP extends StatelessWidget {
     );
   }
 }
+

@@ -12,7 +12,7 @@ class FieldForceDashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        
+        backgroundColor: kPrimaryColor,
       
      appBar: PreferredSize( preferredSize: Size.fromHeight(100.0),child: Appbar(title:"")),
       body: Body(),
